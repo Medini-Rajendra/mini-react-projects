@@ -22,10 +22,14 @@ export default function Accordion() {
   return (
     <div className="flex gap-5 flex-col justify-center items-center h-screen w-screen">
       <button
-        className={`py-2.5 px-5 text-white font-bold text-xl cursor-pointer ${enableMultiSelection ? 'bg-cyan-900':'bg-custom-color'}`}
+        className={`py-2.5 px-5 text-white font-bold text-xl cursor-pointer ${
+          enableMultiSelection ? "bg-cyan-900" : "bg-custom-color"
+        }`}
         onClick={() => setEnableMultiSelection(!enableMultiSelection)}
       >
-        {enableMultiSelection ? 'Disable Multi Selection' : 'Enable Multi Selection'}
+        {enableMultiSelection
+          ? "Disable Multi Selection"
+          : "Enable Multi Selection"}
       </button>
       <div className="w-500">
         {data && data.length > 0 ? (
